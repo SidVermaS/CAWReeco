@@ -1,0 +1,36 @@
+@import "./variables.scss";
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.dFlex  {  
+  display: flex;
+  flex-direction: row;
+}
+.dFlexCenterV {
+  @extend .dFlex;
+  align-items: center;
+}
+.dFlexSpaceBetween {
+  @extend .dFlex;
+  justify-content: space-between;
+}
+.dFlexSpaceBetweenV {
+  @extend .dFlexCenterV;
+  justify-content: space-between;
+}
+.navFont {
+  font-size: $font1;
+  color: $colorGreen1;
+}
+.paddingH {  
+  padding-right: 7rem;
+  padding-left: 7rem;
+}

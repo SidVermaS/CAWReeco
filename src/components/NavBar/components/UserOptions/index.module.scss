@@ -1,0 +1,12 @@
+@import "../../../../styles/index.scss";
+
+.userOptionsBackground {
+  @extend .dFlexCenterV;
+  @extend .navFont;
+  justify-content: space-between;
+  .dropdown {
+    margin-left: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

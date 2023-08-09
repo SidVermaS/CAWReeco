@@ -1,0 +1,18 @@
+@import "../../styles/index.scss";
+
+.buttonBackground {
+  border-radius: 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+}
+.primaryBtn {
+  background-color: $colorGreen;
+  border: 0.2rem solid $colorGreen;
+  color: $colorGreen1;
+}
+.secondaryBtn {
+  background-color: $colorWhite;
+  border: 0.2rem solid $colorGreen;
+  color: $colorGreen;
+}

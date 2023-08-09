@@ -1,0 +1,36 @@
+@import "../../styles/index.scss";
+
+.navBarBackground {
+  @extend .dFlexSpaceBetweenV;
+  @extend .paddingH;
+  background: $colorGreen;
+  min-height: 5rem;
+  max-height: 5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 5;
+  .leftPart {
+    @extend .dFlexCenterV;
+    .link {
+      @extend .navFont;
+      margin-right: 4.25rem;
+      text-decoration: none;
+    }
+    .logo {
+      height: 1.5rem;
+      width: 6rem;
+      margin-right: 4.25rem;
+    }
+  }
+  .rightPart {
+    @extend .dFlexCenterV;
+    .shoppingCart {
+      color: $colorWhite;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 4.25rem;
+    }
+  }
+}
