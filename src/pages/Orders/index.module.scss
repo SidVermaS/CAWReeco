@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+
+.ordersBackground {
+  width: "100%";
+
+  .content {
+    position: absolute;
+    top:14.5rem;
+    z-index: 6;
+  }
+}
