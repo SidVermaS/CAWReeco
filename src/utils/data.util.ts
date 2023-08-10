@@ -5,7 +5,11 @@ const useDataUtil = () => {
     (data: unknown) => data === null || data === undefined,
     []
   );
-  return { checkNullOrUndefined };
+  const checkIsNumber=React.useCallback((value?: string | number): boolean=>
+      !([null,undefined,''].includes(value?.toString()) && 
+             !isNaN(Number(value?.toString()))),[])
+  
+  return { checkIsNumber,checkNullOrUndefined };
 };
 
 export default useDataUtil;

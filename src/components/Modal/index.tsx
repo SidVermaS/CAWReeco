@@ -25,16 +25,27 @@ const Modal = React.forwardRef<ModalRefI, ModalPropsI>((props, ref) => {
       props?.handleRejectClicked();
     }
   }, [hide, props]);
-  const onAcceptClicked = React.useCallback(() => {hide();
+  const onAcceptClicked = React.useCallback(() => {
+    hide();
     if (props?.handleAcceptClicked) {
       props?.handleAcceptClicked();
     }
   }, [hide, props]);
   return show ? (
     <div className={styles.rootBody}>
-      <div className={styles.modalBackground}>
+      <div className={`${styles.modalBackground} ${props?.modalBackgroundStyle?props?.modalBackgroundStyle:''}`}>
         <div className={styles.header}>
-          <PrimaryText type="BOLD2" text={props.title} />
+          <div>
+            <PrimaryText type="BOLD2" text={props.title} />
+            {props?.subTitle && (
+              <PrimaryText
+                textStyle={styles.subTitle}
+                type="NORMAL_TEXT3"
+                text={props?.subTitle}
+              />
+            )}
+          </div>
+
           <RxCross2 onClick={hide} className={styles.cross} />
         </div>
         <div className={styles.body}>{props.children}</div>

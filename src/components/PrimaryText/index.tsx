@@ -13,9 +13,11 @@ const textTypeStyles: TextTypeStyles = {
   BOLD1: styles.boldText1Background,
   BOLD2: styles.boldText2Background,
   BOLD3: styles.boldText3Background,
-  BoldInfo1: styles.boldTextBackground,
+  BOLD_INFO1: styles.boldInfo1Background,
+
   NORMAL_TEXT1: styles.normalText1Background,
   NORMAL_TEXT2: styles.normalText2Background,
+  NORMAL_TEXT3: styles.normalText3Background,
 };
 const PrimaryText = (props: TextI) => {
   return (

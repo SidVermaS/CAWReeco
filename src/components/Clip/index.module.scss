@@ -1,0 +1,15 @@
+@import "../../styles/index.scss";
+
+.clipBackground {
+  color: $colorGrey;
+  border: 0.1rem solid $colorGrey7;
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.isSelected {
+  background-color: $colorGreen;
+  color: $colorWhite;
+}

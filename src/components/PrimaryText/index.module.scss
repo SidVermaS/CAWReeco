@@ -13,6 +13,10 @@
     font-size: 1.6rem;
 }
 .boldText3Background    {
+    @extend .boldTextBackground;
+    font-size: 1.4rem;
+}
+.boldInfo1Background    {
     color: $colorGrey2;
     font-size: 1.4rem;
     font-weight: 600;
@@ -25,5 +29,10 @@
 .normalText2Background{
     color: $colorGrey;
     font-size: 1.25rem;
+    font-weight: 500;
+}
+.normalText3Background{
+    color: $colorGrey;
+    font-size: 1.4rem;
     font-weight: 500;
 }

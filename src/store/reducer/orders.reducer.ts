@@ -32,6 +32,15 @@ const ordersSlice = createSlice({
         status: action.payload.status,
       };
     },
+    updateOrder: (state, action: { payload: { order: OrdersI } }) => {
+      const foundIndex = state.orders.findIndex(
+        (ordersItem) => ordersItem.id === action.payload.order.id
+      );
+      state.orders[foundIndex] = {
+        ...state.orders[foundIndex],
+        ...action.payload.order,
+      };
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getOrders.fulfilled, (state, action) => {
@@ -40,6 +49,6 @@ const ordersSlice = createSlice({
   },
 });
 
-export const { addOrders,updateStatus } = ordersSlice.actions;
+export const { addOrders,updateOrder, updateStatus } = ordersSlice.actions;
 
 export default ordersSlice.reducer;

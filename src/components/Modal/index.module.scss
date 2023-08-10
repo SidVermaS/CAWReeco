@@ -17,11 +17,14 @@
     background-color: $colorWhite;
     min-width: 30%;
     .header {
-      @extend .dFlexSpaceBetweenV;
+      @extend .dFlexSpaceBetween;
       .cross {
         $crossSize: 1.75rem;
         height: $crossSize;
         width: $crossSize;
+      }
+      .subTitle {
+        margin-top: 0.5rem;
       }
     }
     .body {

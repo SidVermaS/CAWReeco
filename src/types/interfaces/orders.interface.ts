@@ -1,4 +1,4 @@
-import { OrderStatus } from "../constants/orders.const";
+import { OrderStatus, ProductDetailsChangeReason } from "../constants/orders.const";
 
 interface OrdersI {
   id: number;
@@ -8,6 +8,7 @@ interface OrdersI {
   price: number;
   quantity: number;
   status?: OrderStatus;
+  reason?:ProductDetailsChangeReason | null
 }
 
 export type { OrdersI };
