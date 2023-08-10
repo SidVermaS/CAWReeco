@@ -1,13 +1,25 @@
 import React from "react";
 import styles from "./index.module.scss";
-import useNavBar from "./hook";
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import logo from "../../assets/images/logo.png";
 import UserOptions from "./components/UserOptions";
-
+import { NavItemsI } from "../../types/interfaces/routes.interface";
+const navItems: NavItemsI[] = [
+  {
+    path: "/",
+    text: "Store",
+  },
+  {
+    path: "/",
+    text: "Orders",
+  },
+  {
+    path: "/",
+    text: "Analytics",
+  },
+];
 const NavBar = () => {
-  const { navItems } = useNavBar();
   return (
     <nav className={styles.navBarBackground}>
       <div className={styles.leftPart}>

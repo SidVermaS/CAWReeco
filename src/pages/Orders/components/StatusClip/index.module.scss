@@ -1,0 +1,18 @@
+@import "../../../../styles/index.scss";
+
+.statusClipBackground {
+  border-radius: 1rem;
+  color: $colorWhite;
+  padding: 0.45rem 1rem;
+  width: fit-content;
+}
+.missingUrgent {
+  background-color: $colorRed;
+}
+
+.missing {
+  background-color: $colorOrange;
+}
+.approved {
+  background-color: $colorGreen2;
+}

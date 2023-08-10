@@ -1,32 +1,52 @@
 import React from "react";
 import styles from "./index.module.scss";
 
-import { AiOutlineRight } from "react-icons/ai";
+import useOrderDetails, { SubOrderDetailsI } from "./hook";
 import PrimaryText from "../../../../components/PrimaryText";
-import Button from "../../../../components/Button";
-import useOrderDetails from "./hook";
-
+const SubOrderDetailsItem = (data: SubOrderDetailsI) => {
+  return (
+    <div className={styles.subOrderDetailsItemBackground}>
+      <div>
+        <PrimaryText
+          type="BOLD3"
+          text={data.heading}
+          textStyle={styles.heading}
+        />
+        {typeof data?.value === "string" && (
+          <PrimaryText type="BOLD2" text={data.value} />
+        )}
+      </div>
+      <div className={styles.line}></div>
+    </div>
+  );
+};
 const OrderDetails = () => {
-  const { orderId } = useOrderDetails();
-
+  const { subOrderDetails } = useOrderDetails();
   return (
     <div className={styles.orderDetailsBackground}>
-      <div className={styles.breadcrumbs}>
-        Orders
-        <AiOutlineRight className={styles.angleRight} />
-        <span className={styles.orderId}>{orderId}</span>
-      </div>
-      <div className={styles.orderActions}>
-        <PrimaryText text={orderId} type="Bold1" />
-        <div className={styles.orderBtns}>
-          <Button text="Back" type="SECONDARY" />
-          <Button
-            text="Approve order"
-            type="PRIMARY"
-            buttonStyle={styles.approveBtn}
-          />
-        </div>
-      </div>
+      <table cellSpacing={0} className={styles.orderDetailsTable}>
+        <tbody>
+          <tr>
+            {React.Children.toArray(
+              subOrderDetails?.map(
+                (subOrderDetailsItem, subOrderDetailsIndex) => (
+                  <td
+                    className={`${styles.orderDetailsTd} ${
+                      subOrderDetailsIndex === 0
+                        ? styles.orderDetailsTdLeft
+                        : subOrderDetailsIndex === subOrderDetails.length - 1
+                        ? styles.orderDetailsTdRight
+                        : styles.orderDetailsTdCenter
+                    }`}
+                  >
+                    <SubOrderDetailsItem {...subOrderDetailsItem} />
+                  </td>
+                )
+              )
+            )}
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

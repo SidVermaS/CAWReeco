@@ -1,0 +1,102 @@
+@import "../../../../styles/index.scss";
+
+.orderTableBackground {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: $colorGrey6;
+  border-radius: 0.5rem;
+  border: 0.1rem solid $colorGrey7;
+  padding: 1.25rem 2rem;
+  .searchActions {
+    @extend .dFlexSpaceBetweenV;
+    .searchBoxBackgroundStyle {
+      width: 40%;
+    }
+    .btnsParent {
+      @extend .dFlexSpaceBetweenV;
+      .printer {
+        color: $colorGreen;
+        height: 2.25rem;
+        width: 2.25rem;
+        margin-left: 3.5rem;
+      }
+    }
+  }
+  .table {
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $colorGrey7;
+    width: 100%;
+    .th {
+      color: $colorGrey;
+      font-size: 1.25rem;
+      font-weight: 600;
+      border-bottom: 0.1rem solid $colorGrey7;
+      text-align: start;
+      padding: 1rem 0 1rem 0.0rem;
+    }
+    .td {
+      border-bottom: 0.1rem solid $colorGrey7;
+      color: $colorGrey;
+      font-size: 1.25rem;
+      font-weight: 500;
+      padding: 1rem 0;
+    }
+    .orderImgParent {
+      @extend .dFlexCenterVH;
+      @extend .td;
+      .orderImg {
+        $orderImgSize: 3rem;
+        height: $orderImgSize;
+        width: $orderImgSize;
+      }
+    }
+
+    .priceQuantity {
+      @extend .td;
+    }
+    .statusBackground {
+      @extend .td;
+      background-color: $colorGrey4;
+      padding-left: 1rem;
+      .statusParent {
+        @extend .dFlexCenterV;
+        justify-content: flex-start;
+      }
+    }
+    .actionsBackground {
+      @extend .td;
+      background-color: $colorGrey4;
+      padding-right: 1rem;
+      .actionsParent {
+        @extend .dFlexCenterV;
+        justify-content: flex-end;
+        .checkIcon {
+          color: $colorGrey;
+          $iconSize: 1.6rem;
+          width: $iconSize;
+          height: $iconSize;
+        }
+        .crossIcon {
+          color: $colorGrey;
+          $iconSize: 1.35rem;
+          width: $iconSize;
+          height: $iconSize;
+          margin: 0 1rem 0 1rem;
+        }
+        .edit {
+          color: $colorGrey;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        .approved {
+color:$colorGreen;
+        }
+        .missing {
+          color:$colorRed;
+
+        }
+      }
+    }
+  }
+}

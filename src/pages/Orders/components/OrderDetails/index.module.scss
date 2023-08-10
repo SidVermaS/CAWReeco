@@ -1,47 +1,31 @@
 @import "../../../../styles/index.scss";
 
 .orderDetailsBackground {
-  @extend .paddingH;
-  background: $colorWhite1;
-  position: fixed;
-  left: 0;
-  right: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  z-index: 5;
-  box-shadow: 0.5rem 0.5rem 0.5rem $colorGrey1;
-  min-height: 7rem;
-  max-height: 7rem;
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
-  .breadcrumbs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: $colorGrey;
-    font-size: 1.5rem;
-    font-weight: 500;
-    .angleRight {
-      margin: 0 1rem;
-      height: 1.25rem;
-      width: 1.25rem;
-    }
-    .orderId {
-      font-size: 1.5rem;
-      font-weight: 500;
-      text-decoration: underline;
-    }
-  }
-  .orderActions {
-    @extend .dFlexSpaceBetween;
-    align-items: flex-end;
-    margin-top: 0.75rem;
-    .orderBtns {
-      @extend .dFlexCenterV;
-      .approveBtn {
-        margin-left: 1.85rem;
+  @extend .dFlexSpaceBetween;
+  width: 100%;
+  background-color: $colorGrey6;
+  border-radius: 0.5rem;
+  border: 0.1rem solid $colorGrey7;
+  padding: 1.25rem 2rem;
+  .orderDetailsTable {
+    width: 100%;
+    .orderDetailsTd {
+      padding: 0 1.75rem;
+      .subOrderDetailsItemBackground {
+        .heading {
+          margin-bottom: 0.5rem;
+        }
       }
+    }
+    .orderDetailsTdLeft {
+      border-right: 0.1rem solid $colorGrey7;
+    }
+    .orderDetailsTdRight {
+      border-left: 0.1rem solid $colorGrey7;
+    }
+    .orderDetailsTdCenter {
+      @extend .orderDetailsTdRight;
+      @extend .orderDetailsTdLeft;
     }
   }
 }

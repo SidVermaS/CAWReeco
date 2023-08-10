@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   // overflow: hidden;
-  -ms-overflow-style: none;
+  // -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -16,6 +16,11 @@
 }
 .dFlexCenterV {
   @extend .dFlex;
+  align-items: center;
+}
+.dFlexCenterVH {
+  @extend .dFlex;
+  justify-content: center;
   align-items: center;
 }
 .dFlexSpaceBetween {
