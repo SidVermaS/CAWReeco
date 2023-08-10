@@ -1,11 +1,15 @@
 @import "../../styles/index.scss";
 
 .ordersBackground {
-  width: "100%";
-
   .content {
+    @extend .paddingH;
+    background-color: $colorGrey5;
     position: absolute;
-    top:14.5rem;
-    z-index: 6;
+    top: 14.5rem;
+    left: 0;
+    right: 0;
+    padding-top: 2.5rem;
+    padding-bottom:  2.5rem;
+    height: 100%;
   }
 }

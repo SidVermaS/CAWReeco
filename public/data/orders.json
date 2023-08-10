@@ -1,0 +1,34 @@
+[
+  {
+    "id":1,
+    "name": "Pav bhaji",
+    "brand": "MDH",
+    "currency": "$",
+    "price": 60.5,
+    "quantity":15
+  },
+  {
+    "id":2,
+    "name": "Salad",
+    "brand": "Hamleys",
+    "currency": "$",
+    "price": 40,
+    "quantity":30
+  },
+  {
+    "id":3,
+    "name": "Veg Kolhapuri",
+    "brand": "Namkin",
+    "currency": "$",
+    "price": 25,
+    "quantity":10
+  },
+  {
+    "id":4,
+    "name": "Museli",
+    "brand": "Nestle",
+    "currency": "$",
+    "price": 105,
+    "quantity":7
+  }
+]

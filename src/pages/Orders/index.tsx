@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "./index.module.scss";
+import OrderHeader from "./components/OrderHeader";
 import OrderDetails from "./components/OrderDetails";
+import OrderTable from "./components/OrderTable";
 
 const Orders = () => {
   return (
     <div className={styles.ordersBackground}>
-      <OrderDetails />
+      <OrderHeader />
       <div className={`${styles.content}`}>
-        {React.Children.toArray(
-          Array.from({ length: 500 }).map((_, index) => (
-            <div>Orders: {index}</div>
-          ))
-        )}
+        <OrderDetails />        
+        <OrderTable />
       </div>
+      
     </div>
   );
 };

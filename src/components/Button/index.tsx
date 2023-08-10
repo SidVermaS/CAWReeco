@@ -1,19 +1,29 @@
 import React from "react";
 import styles from "./index.module.scss";
-import useButton, { ButtonI } from "./hook";
-
+import { ButtonType } from "../../types/constants/components.const";
+interface ButtonI {
+  handleClick?: () => void;
+  text: string;
+  type?: ButtonType;
+  buttonStyle?: string;
+}
+type ButtonTypeStyles = {
+  [key in ButtonType]: string;
+};
+const buttonTypeStyles: ButtonTypeStyles = {
+  PRIMARY: styles.primaryBtn,
+  SECONDARY: styles.secondaryBtn,
+  TERTIARY: styles.tertiaryBtn,
+};
 const Button = (props: ButtonI) => {
-  const { buttonTypeStyles, propsHook, setPropsHook, type } = useButton();
-  React.useEffect(() => {
-    setPropsHook((prev) => ({ ...prev, ...props }));
-  }, [props, setPropsHook]);
   return (
     <button
       className={`${styles.buttonBackground} ${
-        type ? buttonTypeStyles[type] : ""
-      } ${propsHook?.buttonStyle ? propsHook?.buttonStyle : ""}`}
+        props?.type ? buttonTypeStyles[props.type] : ""
+      } ${props?.buttonStyle ? props?.buttonStyle : ""}`}
+      onClick={props?.handleClick}
     >
-      {propsHook?.text}
+      {props?.text}
     </button>
   );
 };
