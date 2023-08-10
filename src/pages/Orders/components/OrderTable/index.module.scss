@@ -33,7 +33,7 @@
       font-weight: 600;
       border-bottom: 0.1rem solid $colorGrey7;
       text-align: start;
-      padding: 1rem 0 1rem 0.0rem;
+      padding: 1rem 0 1rem 0rem;
     }
     .td {
       border-bottom: 0.1rem solid $colorGrey7;
@@ -86,16 +86,61 @@
         }
         .edit {
           color: $colorGrey;
-          font-size: 0.8rem;
+          font-size: 1rem;
           font-weight: 600;
+          &:hover {
+            cursor: pointer;
+          }
         }
         .approved {
-color:$colorGreen;
+          color: $colorGreen;
         }
         .missing {
-          color:$colorRed;
-
+          color: $colorRed;
         }
+      }
+    }
+  }
+  .editModalBackgroundStyle {
+    min-width: 50% !important;
+  }
+  .productParent {
+    @extend .dFlex;
+    justify-content: space-between;
+    .productImg {
+      $productImgSize: 14rem;
+      height: $productImgSize;
+      width: $productImgSize;
+    }
+    .productActionsParent {
+      @extend .dFlexCenterV;
+      margin-bottom: 1rem;
+      .productActionsLabelRow {
+        width: 30%;
+        padding-right: 3rem;
+      }
+      .productActionsRow {
+        width: 70%;
+
+        .total {
+          text-align: start;
+          margin-left: 3rem;
+        }
+        .priceNumberInputBackgroundStyle {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  .reasonsParent {
+    .reasonsHeadings {
+      @extend .dFlexCenterV;
+      margin-bottom: 1rem;
+    }
+    .reasons  {
+      @extend .dFlexCenterV;
+      .clipBackgroundStyle  {
+        margin-right: 2rem;
       }
     }
   }

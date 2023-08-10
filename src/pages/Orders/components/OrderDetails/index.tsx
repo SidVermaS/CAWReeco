@@ -8,7 +8,7 @@ const SubOrderDetailsItem = (data: SubOrderDetailsI) => {
     <div className={styles.subOrderDetailsItemBackground}>
       <div>
         <PrimaryText
-          type="BOLD3"
+          type="BOLD_INFO1"
           text={data.heading}
           textStyle={styles.heading}
         />
